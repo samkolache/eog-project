@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app_a:
+    build: ./app_a
+    ports:
+      - "8000:8000"
+    depends_on:
+      - app_b
+
+  app_b:
+    build: ./app_b
+    ports:
+      - "8010:8000"
